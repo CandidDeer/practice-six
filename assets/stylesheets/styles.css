@@ -1,0 +1,206 @@
+*:focus {
+    outline: solid 2px #732f17;
+}
+
+@font-face {
+    font-family: "Anthasia";
+    src: url(../fonts/Anthanista1.woff2);
+    src: url(../fonts/Anthanista1.woff);
+}
+
+body {
+    background-attachment: fixed;
+    background-color: #f2cbbd;
+    background-image: url(../background.jpg);
+    background-size: 45%;
+    font-size: 100%;
+}
+
+header {
+    background-color: #bf4226;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.8);
+    display: flex;
+    flex-direction: column;
+    min-height: 15vh;
+    padding: 1% 0;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+h1 {
+    color: #f2f2f2;
+    font-family: "Anthasia", serif;
+    font-size: 3.75em;
+    font-weight: normal;
+    line-height: 100%;
+    margin: 2% 0 1% 0;
+    text-align: center;
+}
+
+nav {
+    margin: 0 auto 2% auto;
+}
+
+nav a {
+    border-right: solid 2px #f2f2f2;
+    padding: 0 10px;
+    text-align: center;
+}
+
+nav a:last-child {
+    border: none;
+}
+
+article {
+    background-color: #f2cbbd;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.5);
+    margin: 0 6%;
+    padding: 1% 5%;
+}
+
+h2 {
+    color: #bf4226;
+    font-family: "Anthasia", serif;
+    font-size: 2.25em;
+    line-height: 100%;
+}
+
+#columntext {
+    column-count: 2;
+    column-fill: balance;
+    column-gap: 4%;
+}
+
+p {
+    color: #2b1608;
+    font-size: 1em;
+    line-height: 120%;
+    margin: 0 0 1em 0;
+    text-align: justify;
+}
+
+.easteregg {
+    margin: 1% 0;
+    width: 10%;
+}
+
+@keyframes roll {
+    0% {transform: rotate(0deg); margin-left: 0;}
+    25% {transform: rotate(90deg) translateX(18%); margin-left: 9.5%;}
+    50% {transform: rotate(180deg); margin-left: 19%;}
+    75% {transform: rotate(270deg) translateX(-18%); margin-left: 28.5%;}
+    100% {transform: rotate(360deg); margin-left: 38%;}
+}
+
+.easteregg:focus {
+    animation-direction: alternate;
+    animation-duration: 3s;
+    animation-iteration-count: 2;
+    animation-name: roll;
+    outline: none;
+}
+
+#stickybottom {
+    bottom: 0;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.8);
+    display: flex;
+    flex-direction: column;
+    position: sticky;
+}
+
+aside {
+    background-color: #d98977;
+    display: flex;
+    flex-direction: row;
+    font-size: 1.125em;
+    padding: 1.5% 2%;
+}
+
+h3 {
+    color: #f2f2f2;
+    font-family: "Anthasia", serif;
+    font-size: 1.75em;
+    font-weight: normal;
+    line-height: 100%;
+    margin: 0;
+}
+
+input {
+    background-color: #f2f2f2;
+    border: solid 2px #bf4226;
+    color: #2b1608;
+    font-size: 0.75em;
+    margin: 0 5px 0 20px;
+    padding: 5px 10px;
+}
+
+button {
+    background-color: #bf4226;
+    border-color: #f2f2f2;
+    color: #f2f2f2;
+}
+
+footer {
+    background-color: #bf4226;
+    padding: 1% 0;
+}
+
+footer p {
+    color: #f2f2f2;
+    line-height: 100%;
+    margin: 0;
+    text-align: center;
+}
+
+a:link {
+    color: #f2cbbd;
+}
+
+a:hover {
+    color: #d98977;
+}
+
+a:visited {
+    color: #c0c0c0;
+}
+
+@media screen and (max-width: 1200px) {
+    h1 {
+        margin: 5% 0 2% 0;
+    }
+    article {
+        padding: 3% 7% 5% 7%;
+    }
+    .easteregg {
+        display: none;
+    }
+    footer {
+        padding: 2% 0;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    h1 {
+        margin: 6% 0 3% 0;
+    }
+    article {
+        padding: 4% 8% 6% 8%;
+    }
+    #columntext {
+        column-count: 1;
+    }
+    aside {
+        flex-direction: column;
+    }
+    h3 {
+        margin: 4% 0;
+        text-align: center;
+    }
+    form {
+        margin: 0 auto 4% auto;
+    }
+    input {
+        margin: 0;
+    }
+}
